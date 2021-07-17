@@ -1,0 +1,148 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+
+@font-face {
+    font-family: 'Outrun future';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Outrun future'), url('../fonts/Outrun future.woff') format('woff');
+}
+@font-face {
+    font-family: 'Outrun future Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Outrun future Bold'), url('../fonts/Outrun future Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Outrun future Bold Italic';
+    font-style: italic;
+    font-weight: bold;
+    src: local('Outrun future Bold Italic'), url('../fonts/Outrun future Bold Italic.woff') format('woff');
+}
+
+body{
+	font-family: 'Outrun future';
+	background-color: black;
+}
+#menu__toggle{
+	opacity: 0;
+}
+.bg_top{
+	max-width: 2000px;
+	height: 1125px;
+	background: url(../img/Fade_to_Photo_BG.png) 0 930px/ 2000px 1059px no-repeat, url(../img/Photo.png) 0 0/ 2000px 1125px no-repeat;
+}
+.menu__box{
+	max-width: 600px;
+	margin: 135px auto;
+	display: flex;
+	justify-content: space-around;
+}
+.top{
+	font-size: 24px;
+	color: #ffffff;
+}
+.hover{
+	transition: transform .2s ease-in-out;
+}
+.hover:hover{
+	transform: scale(1.5);
+}
+.logo{
+	color: white;
+	text-align: center;
+	font-size: 300px;
+	opacity: 0.5;
+}
+.title{
+	margin-top: 70px;
+	font-size: 52px;
+	color: white;
+	text-align: center;
+	opacity: 0.5;
+}
+.button{
+	margin: 115px auto;
+	max-width: 247px;
+	background: url(../img/Button.png)0 0/cover no-repeat;
+	text-align: center;	
+}
+.more{
+	font-size: 18px;
+}
+.art{
+	max-width: 606px;
+	height: 100%;
+	font-size: 14px;
+	letter-spacing: 0px;
+	line-height: 36px;
+	color: #ffffff;
+	font-weight: 400;
+	font-family: "Montserrat";
+	margin-top: 60px;
+}
+.bg_center{
+	background:  url(../img/Photo_About_us.png) 0 0/ 1417px 974px no-repeat;
+	/*border: 1px solid white;*/
+	max-width: 1410px;
+	display: flex;
+	justify-content: space-between;
+	margin: 60px auto;
+}
+.about{
+	font-size: 24px;
+	line-height: 30px;
+	color: #95a7ff;
+}
+.title1{
+	color: white;
+	font-size: 60px;
+	margin-top: 40px;	
+}
+.l_card{
+	position: relative;
+}
+.r_card{
+	margin-top: 130px;
+}
+.pict1{
+	position: absolute;
+	left: 105px;
+}
+.pict2{
+	position: absolute;
+	top: 245px;
+}
