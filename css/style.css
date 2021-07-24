@@ -66,17 +66,22 @@ body{
 	max-width: 2000px;
 	padding: 0 15px;
 }
-#menu__toggle{
-	opacity: 0;
-	display: none;
-}
 .bg_top{
 	position: relative;
 }
-.burger-menu{
-	
+.hamburger {
+	display: none;
 }
-.menu__box{
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+}
+.nav-menu{
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -85,24 +90,23 @@ body{
 	display: flex;
 	justify-content: space-around;
 }
-.top{
+.nav-link{
 	font-size: 24px;
 	color: #ffffff;
 }
-.top:hover{
+.nav-link:hover{
 	color: yellow;
 }
-.hover{
+.nav-item{
 	padding: 0 5px 5px 10px; 
 }
-.hover:hover{
+.nav-item:hover{
 	background: url(../img/Hover_menu.png) 50%/ 100% 100% no-repeat;
 }
-
 .hi_container{
 	max-height: 100%;
-	background: url(../img/Photo_3.png) 0 100%/ 100% 15% no-repeat, url(../img/Photo.png) 0 0/ auto 100% no-repeat;
-	border: 1px solid red;
+	background: url(../img/Photo_3.png) 0 100%/ 100% 15% no-repeat, url(../img/Photo.png) 0 0/ auto 100%;
+	border: 1px solid black;
 }
 .logo{
 	margin-top: 340px;
@@ -143,14 +147,13 @@ body{
 .med_container{
 	height: 800px;
 	background:  url(../img/Photo_About_us.png) 0 0/ auto 100% no-repeat;
-	border: 1px solid red;
+	border: 1px solid black;
 }
 .cards{
 	display: flex;
 	max-width: 1410px;
 	justify-content: space-between;
 	margin: 70px auto;
-	/*border: 1px solid pink;*/
 }
 .l_card{
 	position: relative;
@@ -183,8 +186,8 @@ body{
 }
 .l_med_container{
 	height: 867px;
-	background:  url(../img/Photo_1.png) 0 0/ auto 100% no-repeat;
-	border: 1px solid red;
+	background:  url(../img/Photo_1.png) 0 0/ auto 100%;
+	border: 1px solid black;
 }
 .c_card{
 	max-width: 570px;
@@ -207,8 +210,8 @@ body{
 }
 .low_container{
 	height: 910px;
-	background: url(../img/Photo_3.png) 0 100%/ 100% auto no-repeat,  url(../img/Photo_2.png) 0 0/ auto 100% no-repeat;
-	border: 1px solid red;
+	background: url(../img/Photo_3.png) 0 100%/ 100% auto no-repeat,  url(../img/Photo_2.png) 0 0/ auto 100%;
+	border: 1px solid black;
 }
 .title2{
 	margin-top: 190px;
@@ -243,7 +246,7 @@ body{
 	.hi_container{
 		max-height: 70%;
 		}
-	.menu__box{
+	.nav-menu{
 		margin-top: 85px;
 	}
 	.logo{
@@ -260,7 +263,6 @@ body{
 		margin: 50px auto;
 	}
 	.l_card{
-		position: relative;
 		width: 700px;
 	}
 	.pict1{
@@ -311,7 +313,7 @@ body{
 	.hi_container{
 		max-height: 50%;
 	}
-	.menu__box{
+	.nav-menu{
 		margin-top: 45px;
 	}
 	.logo{
@@ -336,7 +338,6 @@ body{
 		max-width: 650px;
 	}
 	.l_card{
-		position: relative;
 		width: 500px;
 	}
 	.pict1{
@@ -397,12 +398,129 @@ body{
 		max-width: 130px;
 		max-height: 30px;
 		bottom: 30px;
-}
+	}
 	.content{
 		font-size: 10px;
 		line-height: 20px;
 	}
 }
-@media (max-width: 767px){
-	
+@media (max-width: 768px){
+	body{
+		max-width: none;
+		margin: 0 auto;
+		padding: 10px 10px;
+	}
+
+	.nav-menu{
+		position: fixed;
+		left: -100%;
+		top: 5rem;
+		flex-direction: column;
+		background-color: grey;
+		width: 50%;
+		border-radius: 10px;
+		text-align: center;
+		transition: 0.3s;
+		z-index: 3;
+	}
+	.nav-menu.active{
+		left: 50%;
+	}
+	.nav-item{
+		margin: 2.5rem 0;
+	}
+	.hamburger{
+		position: fixed;
+		right: 30px;
+		top: 15px;
+		display: block;
+		cursor: pointer;
+		color: yellow;
+	}
+	.hamburger.active .bar:nth-child(2){
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1){
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.hi_container{
+		max-height: 30%;
+	}
+	.logo{
+		font-size: 70px;
+		margin-top: 70px;
+	}
+	.title{
+		margin-top: 20px;
+		font-size: 20px;
+	}
+	.button{
+		margin: 50px auto;
+		max-width: 150px;
+		height: 35px;
+		padding-top: 7px;
+	}
+	.med_container{
+		height: 230px;
+	}
+	.cards{
+		margin: 10px auto;
+		max-width: 650px;
+	}
+	.l_card{
+		width: 200px;
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 30%
+	}
+	.img{
+		position: relative;
+		max-width: 75%;
+		margin: 0 auto;
+	}
+	.pict1{
+		left: 0;
+		margin-bottom: 10px;
+	}
+	.pict2{
+		top: 0;
+	}
+	.photo{
+		width: 100%;
+	}
+	.r_card{
+		max-width: 370px;
+		margin: 10px 0 0 15px;
+	}
+	.art{
+		font-size: 10px;
+		word-spacing: 3px;
+		margin-top: 15px;
+	}
+	.l_med_container{
+		max-height: 270px;
+	}
+	.c_card{
+		max-width: 300px;
+		margin: 55px auto;
+	}
+	.sliders{
+		margin: 30px auto;
+	}
+	.low_container{
+		height: 300px;
+	}
+	.title2{
+		font-size: 20px;
+	}
+	.f_container{
+		bottom: 20px;
+	}
+	.content{
+		line-height: 10px;
+	}
 }
