@@ -32,26 +32,13 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
-
-
 @font-face {
 	font-family: 'Outrun future';
 	font-style: normal;
 	font-weight: normal;
 	src: local('Outrun future'), url('../fonts/Outrun future.woff') format('woff');
 }
-@font-face {
-	font-family: 'Outrun future Bold';
-	font-style: normal;
-	font-weight: bold;
-	src: local('Outrun future Bold'), url('../fonts/Outrun future Bold.woff') format('woff');
-}
-@font-face {
-	font-family: 'Outrun future Bold Italic';
-	font-style: italic;
-	font-weight: bold;
-	src: local('Outrun future Bold Italic'), url('../fonts/Outrun future Bold Italic.woff') format('woff');
-}
+
 @font-face {
 	font-family: 'Montserrat';
 	font-style: normal;
@@ -59,12 +46,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	src: local('Montserrat'), local('Montserrat-Regular'), url('../fonts/montserrat.woff2') format('woff2'), url('../fonts/montserrat.woff') format('woff'), url('../fonts/montserrat.ttf') format('truetype');
 }
 
-
 body{
 	font-family: 'Outrun future';
 	background-color: black;
-	max-width: 2000px;
-	padding: 0 15px;
 }
 .bg_top{
 	position: relative;
@@ -241,7 +225,7 @@ body{
 }
 @media (max-width: 1200px){
 	body{
-		max-width: 1100px;
+		max-width: 1200px;
 	}
 	.hi_container{
 		max-height: 70%;
@@ -308,7 +292,7 @@ body{
 }
 @media (max-width: 990px){
 	body{
-		max-width: 750px;
+		max-width: 990px;
 	}
 	.hi_container{
 		max-height: 50%;
@@ -408,9 +392,7 @@ body{
 	body{
 		max-width: none;
 		margin: 0 auto;
-		padding: 10px 10px;
 	}
-
 	.nav-menu{
 		position: fixed;
 		left: -100%;
@@ -472,29 +454,11 @@ body{
 		max-width: 650px;
 	}
 	.l_card{
-		width: 200px;
-		display: flex;
-		flex-direction: column;
-		flex: 0 0 30%
-	}
-	.img{
-		position: relative;
-		max-width: 75%;
-		margin: 0 auto;
-	}
-	.pict1{
-		left: 0;
-		margin-bottom: 10px;
-	}
-	.pict2{
-		top: 0;
-	}
-	.photo{
-		width: 100%;
+		display: none;
 	}
 	.r_card{
 		max-width: 370px;
-		margin: 10px 0 0 15px;
+		margin: 10px auto;
 	}
 	.art{
 		font-size: 10px;
