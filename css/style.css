@@ -460,10 +460,14 @@ body{
 		max-width: 370px;
 		margin: 10px auto;
 	}
+	.about, .title1{
+		text-align: center;
+	}
 	.art{
 		font-size: 10px;
 		word-spacing: 3px;
 		margin-top: 15px;
+		text-align: center;
 	}
 	.l_med_container{
 		max-height: 270px;
